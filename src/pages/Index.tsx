@@ -50,7 +50,7 @@ const Index = () => {
             <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <LinkedinIcon className="w-6 h-6" />
             </a>
-            <a href="https://instagram.com/rohan_creator" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+            <a href="https://instagram.com/rx_hxn" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <Instagram className="w-6 h-6" />
             </a>
             <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
