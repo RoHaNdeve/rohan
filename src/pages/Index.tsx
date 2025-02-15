@@ -1,5 +1,5 @@
 
-import { GithubIcon, LinkedinIcon, Mail, Code, Briefcase } from "lucide-react";
+import { GithubIcon, LinkedinIcon, Mail, Code, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const Index = () => {
@@ -33,24 +33,27 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#E5DEFF] to-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 animate-fade-in">
         <div className="text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6">
-            John Doe
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] text-transparent bg-clip-text mb-6">
+            Rohan
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
+          <p className="text-xl md:text-2xl text-gray-700 mb-8">
             Full Stack Developer & Designer
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="#" className="text-gray-600 hover:text-accent transition-colors">
+            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <GithubIcon className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-accent transition-colors">
+            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <LinkedinIcon className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-accent transition-colors">
+            <a href="https://instagram.com/rohan_creator" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>
@@ -58,20 +61,20 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-gradient-to-r from-[#FEC6A1] to-[#FFDEE2]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center mb-12">
             Skills & Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
+                className="p-6 glass-card rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="text-accent mb-4">{skill.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                <p className="text-gray-600">{skill.description}</p>
+                <div className="text-[#D946EF] mb-4">{skill.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-[#8B5CF6]">{skill.name}</h3>
+                <p className="text-gray-700">{skill.description}</p>
               </div>
             ))}
           </div>
@@ -79,9 +82,9 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#E5DEFF]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center mb-12">
             Featured Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -89,7 +92,7 @@ const Index = () => {
               <a
                 href={project.link}
                 key={index}
-                className="group relative overflow-hidden rounded-xl"
+                className="group relative overflow-hidden rounded-xl shadow-lg"
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
               >
@@ -98,7 +101,7 @@ const Index = () => {
                   alt={project.title}
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className={`absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-300 ${isHovered === index ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`absolute inset-0 bg-gradient-to-b from-[#8B5CF6]/80 to-[#D946EF]/80 flex items-center justify-center transition-opacity duration-300 ${isHovered === index ? 'opacity-100' : 'opacity-0'}`}>
                   <div className="text-white text-center p-4">
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <p>{project.description}</p>
@@ -111,13 +114,13 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-primary text-white">
+      <section className="py-20 px-4 bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-xl mb-8">I'm always interested in hearing about new projects and opportunities.</p>
           <a
-            href="mailto:contact@johndoe.com"
-            className="inline-flex items-center gap-2 bg-accent px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+            href="mailto:contact@rohan.com"
+            className="inline-flex items-center gap-2 bg-white text-[#8B5CF6] px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
           >
             <Mail className="w-5 h-5" />
             Get in Touch
