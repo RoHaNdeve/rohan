@@ -11,25 +11,14 @@ const Index = () => {
     { name: "UI/UX Design", icon: <Code className="w-6 h-6" />, description: "Figma, Adobe XD" },
   ];
 
-  const projects = [
+  const certifications = [
     {
-      title: "Project 1",
-      description: "A beautiful web application",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop&q=60",
-      link: "#"
-    },
-    {
-      title: "Project 2",
-      description: "Mobile-first responsive design",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop&q=60",
-      link: "#"
-    },
-    {
-      title: "Project 3",
-      description: "Full-stack application",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=60",
-      link: "#"
-    },
+      title: "Power BI Job Simulation",
+      organization: "PWC",
+      description: "Completed practical tasks in Call Centre Trends, Customer Retention, and Diversity & Inclusion",
+      date: "October 2024",
+      image: "/lovable-uploads/e5308916-8d99-40ef-b9c1-37209b245d46.png"
+    }
   ];
 
   return (
@@ -81,33 +70,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Certifications Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-white to-[#E5DEFF]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center mb-12">
-            Featured Projects
+            Certifications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <a
-                href={project.link}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {certifications.map((cert, index) => (
+              <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg"
-                onMouseEnter={() => setIsHovered(index)}
-                onMouseLeave={() => setIsHovered(null)}
+                className="p-6 glass-card rounded-xl hover:shadow-xl transition-all duration-300"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                <img 
+                  src={cert.image} 
+                  alt={cert.title} 
+                  className="w-full h-48 object-contain mb-4"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-b from-[#8B5CF6]/80 to-[#D946EF]/80 flex items-center justify-center transition-opacity duration-300 ${isHovered === index ? 'opacity-100' : 'opacity-0'}`}>
-                  <div className="text-white text-center p-4">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                </div>
-              </a>
+                <h3 className="text-xl font-semibold mb-2 text-[#8B5CF6]">{cert.title}</h3>
+                <p className="text-gray-600 mb-2">{cert.organization}</p>
+                <p className="text-gray-700 mb-2">{cert.description}</p>
+                <p className="text-gray-600">{cert.date}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -119,7 +103,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-xl mb-8">I'm always interested in hearing about new projects and opportunities.</p>
           <a
-            href="mailto:contact@rohan.com"
+            href="mailto:rohanmahendranr@gmail.com"
             className="inline-flex items-center gap-2 bg-white text-[#8B5CF6] px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
           >
             <Mail className="w-5 h-5" />
