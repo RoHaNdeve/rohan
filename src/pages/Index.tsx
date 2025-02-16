@@ -44,16 +44,16 @@ const Index = () => {
             Full Stack Developer & Designer
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+            <a href="https://github.com/RoHaNdeve" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors" target="_blank" rel="noopener noreferrer">
               <GithubIcon className="w-6 h-6" />
             </a>
-            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+            <a href="https://www.linkedin.com/in/rohanmahendran" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors" target="_blank" rel="noopener noreferrer">
               <LinkedinIcon className="w-6 h-6" />
             </a>
-            <a href="https://instagram.com/_rx_hxn_" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+            <a href="https://instagram.com/_rx_hxn_" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="#" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
+            <a href="mailto:rohanmahendranr@gmail.com" className="text-[#8B5CF6] hover:text-[#D946EF] transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>
