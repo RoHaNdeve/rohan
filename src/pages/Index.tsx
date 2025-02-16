@@ -38,7 +38,7 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center px-4 animate-fade-in">
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] text-transparent bg-clip-text mb-6">
-            Rohan
+            ROHAN
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8">
             Full Stack Developer & Designer
