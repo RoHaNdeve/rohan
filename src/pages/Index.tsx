@@ -1,6 +1,7 @@
 
 import { GithubIcon, LinkedinIcon, Mail, Code, Instagram } from "lucide-react";
 import { useState } from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Index = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
@@ -18,6 +19,27 @@ const Index = () => {
       description: "Completed practical tasks in Call Centre Trends, Customer Retention, and Diversity & Inclusion",
       date: "October 2024",
       image: "/lovable-uploads/e5308916-8d99-40ef-b9c1-37209b245d46.png"
+    },
+    {
+      title: "Grow Offline Sales Certification",
+      organization: "Google",
+      description: "Successfully completed and certified in Grow offline sales certification",
+      date: "March 23, 2024 - March 23, 2025",
+      image: "/lovable-uploads/2d75222b-b275-4c5a-ad80-fcccdbf052f4.png"
+    },
+    {
+      title: "Excel Skills Job Simulation",
+      organization: "JP Morgan Chase & Co.",
+      description: "Completed practical tasks in Excel including Keyboard Shortcuts, Conditional Formatting, VBA Macros, Data Visualization, and Data-Driven Storytelling",
+      date: "September 30th, 2024",
+      image: "/lovable-uploads/73c40240-6aa6-4cad-bbcf-4a088b0cca79.png"
+    },
+    {
+      title: "Agile Project Management",
+      organization: "HP LIFE",
+      description: "Learned skills in defining MVP, understanding iterative and incremental product development, analyzing Agile project management tools like Scrum and Kanban",
+      date: "October 13, 2024",
+      image: "/lovable-uploads/e2ad3a16-89bc-4657-a4f5-1d92fa50f2e6.png"
     }
   ];
 
@@ -76,24 +98,26 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center mb-12">
             Certifications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="p-6 glass-card rounded-xl hover:shadow-xl transition-all duration-300"
-              >
-                <img 
-                  src={cert.image} 
-                  alt={cert.title} 
-                  className="w-full h-48 object-contain mb-4"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-[#8B5CF6]">{cert.title}</h3>
-                <p className="text-gray-600 mb-2">{cert.organization}</p>
-                <p className="text-gray-700 mb-2">{cert.description}</p>
-                <p className="text-gray-600">{cert.date}</p>
-              </div>
-            ))}
-          </div>
+          <ScrollArea className="h-[800px] rounded-md">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className="p-6 glass-card rounded-xl hover:shadow-xl transition-all duration-300"
+                >
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title} 
+                    className="w-full h-48 object-contain mb-4"
+                  />
+                  <h3 className="text-xl font-semibold mb-2 text-[#8B5CF6]">{cert.title}</h3>
+                  <p className="text-gray-600 mb-2">{cert.organization}</p>
+                  <p className="text-gray-700 mb-2">{cert.description}</p>
+                  <p className="text-gray-600">{cert.date}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
         </div>
       </section>
 
